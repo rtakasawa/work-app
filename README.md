@@ -10,4 +10,4 @@ rails db:migrate
 rails s
 ```
 
-[Railsアプリケーション起動 (localhost:8080)](http://localhost:8080)
+[Railsアプリケーション起動 (localhost:3000)](http://localhost:3000)
