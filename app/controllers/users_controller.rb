@@ -1,8 +1,13 @@
 class UsersController < ApplicationController
-  before_action :loggin_in_check
+  # before_action :loggin_in_check
+  before_action :set_params, only: [:show]
   def new
     @user = User.new
+  end
 
+  def show
+    @blogs = current_user.favorite_users.all
+    @blogs_count = current_user.favorite_users.count
   end
 
   def create
@@ -21,7 +26,11 @@ class UsersController < ApplicationController
   end
 
   def loggin_in_check
-    redirect_to blogs_path if logged_in?
+    # redirect_to blogs_path if logged_in?
+  end
+
+  def set_params
+    @user = User.find(params[:id])
   end
 
 end
