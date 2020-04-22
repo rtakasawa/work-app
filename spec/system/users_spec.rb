@@ -29,7 +29,6 @@ RSpec.describe 'Users', type: :system do
         fill_in "session_password", with: 'testtest'
         click_button "Save Session"
         expect(page).to have_content "ログインに成功しました！"
-
       end
     end
   end
