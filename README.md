@@ -1,7 +1,13 @@
-# チーム
+# 確認手順
 
 ```
-takasawa
+git clone https://github.com/rtakasawa/work-app.git
+cd work-app
 
-tanaka
+rails db:create
+rails db:migrate
+
+rails s
 ```
+
+localhost:8080
